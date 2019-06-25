@@ -1,0 +1,18 @@
+<h1 style= "font-weight:bold; text-align:center" >My Tasks</h1>
+
+<% @tasks.each do |task|%>
+<p style="text-align:center; font-size:20px">
+  <%= link_to "Delete", task_path(task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+<%= link_to task.title, task_path(task) %></p>
+<% end %>
+
+<%= link_to "Add Task", tasks_new_path %>
+
+
+
+
+
+
+
